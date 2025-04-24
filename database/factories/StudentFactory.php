@@ -12,11 +12,14 @@ class StudentFactory extends Factory
     {
         return [
 
+
             'name' => fake()->name,
             'lastname' => fake()->lastName,
-            'age' => fake()->numberBetween(15,20),
+            'age' => fake()->numberBetween(15, 20),
             'address' => fake()->streetAddress(3),
             'phone_number' => fake()->phoneNumber(),
+
+
         ];
     }
 }
