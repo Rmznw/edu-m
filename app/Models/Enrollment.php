@@ -9,8 +9,13 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Enrollment extends Model
 {
     protected $table = 'enrollments';
+
+
     protected $primaryKey = 'id';
-    protected $fillable = ['enroll_no','batch_id', 'student_id','join_date', 'fee'];
+
+
+    protected $fillable = ['enroll_no', 'batch_id', 'student_id', 'join_date', 'fee'];
+
 
     public function student(): BelongsTo
     {
@@ -21,7 +26,7 @@ class Enrollment extends Model
     public function batch(): BelongsTo
 
     {
-       return $this->belongsTo(Batch::class);
+        return $this->belongsTo(Batch::class);
     }
 
 
@@ -29,7 +34,6 @@ class Enrollment extends Model
     {
         return $this->hasMany(Payment::class);
     }
-
 
 
 }
