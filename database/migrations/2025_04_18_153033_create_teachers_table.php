@@ -9,7 +9,6 @@ return new class extends Migration {
     public function up(): void
     {
 
-
         Schema::create('teachers', function (Blueprint $table) {
             $table->id();
             $table->foreignId('teacher_id')->index()->nullable()->constrained()->nullOnDelete();
@@ -20,6 +19,8 @@ return new class extends Migration {
             $table->string('phone_number')->default(0);
             $table->string('category')->default(0);
             $table->timestamps();
+
+
         });
     }
 
