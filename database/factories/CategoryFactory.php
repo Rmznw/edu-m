@@ -13,13 +13,16 @@ class CategoryFactory extends Factory
     public function definition(): array
     {
 
-            $categories = ['IT','Design','Analytic','Marketing'];
+        $categories = ['IT', 'Design', 'Analytic', 'Marketing'];
 
         return [
 
-            'title' =>fake()->sentence(),
-            'description' =>fake()->paragraph(),
+
+            'title' => fake()->sentence(),
+            'description' => fake()->paragraph(),
             'category' => fake()->randomElement($categories),
+
+
         ];
     }
 }

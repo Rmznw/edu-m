@@ -16,9 +16,7 @@ class TeacherController extends Controller
 
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+
     public function create(): View
     {
         return view('teachers.create');
@@ -52,7 +50,7 @@ class TeacherController extends Controller
         $teacher = Teacher::find($id);
         $input = $request->all();
         $teacher->update($input);
-        return redirect('teacher')->with('success','Teacher updated!');
+        return redirect('teacher')->with('success', 'Teacher updated!');
 
     }
 
