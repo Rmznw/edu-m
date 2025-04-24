@@ -11,7 +11,6 @@ class CourseController extends Controller
 {
 
 
-
     public function index()
     {
         $course = Course::all();
@@ -26,7 +25,6 @@ class CourseController extends Controller
         return view('courses.create');
 
     }
-
 
 
     public function store(Request $request): RedirectResponse
@@ -45,14 +43,13 @@ class CourseController extends Controller
     }
 
 
-
     public function show(string $id): View
     {
         $course = Course::find($id);
         return view('courses.show')->with('courses', $course);
     }
 
-    public function edit(string $id):View
+    public function edit(string $id): View
     {
         $course = Course::find($id);
         return view('courses.edit')->with('course', $course);
@@ -63,7 +60,7 @@ class CourseController extends Controller
         $course = Course::find($id);
         $input = $request->all();
         $course->update($input);
-        return redirect()->with('success','Course updated!');
+        return redirect()->with('success', 'Course updated!');
     }
 
 

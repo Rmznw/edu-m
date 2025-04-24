@@ -51,7 +51,7 @@ StudentController extends Controller
         $student = Student::find($id);
         $input = $request->all();
         $student->update($input);
-        return redirect()->with('success','Student updated!');
+        return redirect()->with('success', 'Student updated!');
 
     }
 

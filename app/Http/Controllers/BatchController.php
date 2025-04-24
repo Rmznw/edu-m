@@ -20,11 +20,10 @@ class BatchController extends Controller
 
     public function create(): View
     {
-        $courses = Course::pluck('name','id');
-        return view('batches.create',compact('courses'));
+        $courses = Course::pluck('name', 'id');
+        return view('batches.create', compact('courses'));
 
     }
-
 
 
     public function store(Request $request): RedirectResponse
@@ -35,14 +34,13 @@ class BatchController extends Controller
     }
 
 
-
     public function show(string $id): View
     {
         $batch = Batch::find($id);
         return view('batches.show')->with('batches', $batch);
     }
 
-    public function edit(string $id):View
+    public function edit(string $id): View
     {
         $batch = Batch::find($id);
         return view('batches.edit')->with('batches', $batch);
@@ -53,7 +51,7 @@ class BatchController extends Controller
         $batch = Batch::find($id);
         $input = $request->all();
         $batch->update($input);
-        return redirect()->with('success','Batch updated!');
+        return redirect()->with('success', 'Batch updated!');
     }
 
 

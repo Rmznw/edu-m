@@ -12,8 +12,6 @@ class PaymentController extends Controller
 {
 
 
-
-
     public function index()
     {
         $payment = Payment::all();
@@ -25,10 +23,9 @@ class PaymentController extends Controller
     public function create(): View
     {
         $enrollments = Enrollment::pluck('id');
-        return view('payments.create',compact('enrollments'));
+        return view('payments.create', compact('enrollments'));
 
     }
-
 
 
     public function store(Request $request): RedirectResponse
@@ -39,14 +36,13 @@ class PaymentController extends Controller
     }
 
 
-
     public function show(string $id): View
     {
         $payment = Payment::find($id);
         return view('payments.show')->with('payments', $payment);
     }
 
-    public function edit(string $id):View
+    public function edit(string $id): View
     {
         $payment = Payment::find($id);
         return view('payments.edit')->with('payment', $payment);
@@ -57,7 +53,7 @@ class PaymentController extends Controller
         $payment = Payment::find($id);
         $input = $request->all();
         $payment->update($input);
-        return redirect()->with('alert-success','Payment updated!');
+        return redirect()->with('alert-success', 'Payment updated!');
     }
 
 

@@ -25,7 +25,6 @@ class EnrollmentController extends Controller
     }
 
 
-
     public function store(Request $request): RedirectResponse
     {
         $input = $request->all();
@@ -34,14 +33,13 @@ class EnrollmentController extends Controller
     }
 
 
-
     public function show(string $id): View
     {
         $enrollment = Enrollment::find($id);
         return view('enrollments.show')->with('enrollments', $enrollment);
     }
 
-    public function edit(string $id):View
+    public function edit(string $id): View
     {
         $enrollment = Enrollment::find($id);
         return view('enrollments.edit')->with('enrollments', $enrollment);
@@ -52,7 +50,7 @@ class EnrollmentController extends Controller
         $enrollment = Enrollment::find($id);
         $input = $request->all();
         $enrollment->update($input);
-        return redirect()->with('success','Enrollment updated!');
+        return redirect()->with('success', 'Enrollment updated!');
     }
 
 
@@ -61,8 +59,6 @@ class EnrollmentController extends Controller
         $enrollment->delete();
         return redirect()->route('enrollments.index')->with('success', 'Enrollment deleted');
     }
-
-
 
 
 }
