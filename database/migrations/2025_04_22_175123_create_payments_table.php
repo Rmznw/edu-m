@@ -10,10 +10,11 @@ return new class extends Migration {
         Schema::create('payments', function (Blueprint $table) {
 
             $table->id();
-            $table->timestamps();
             $table->foreignId('enrollment_id')->index()->constrained()->cascadeOnDelete();
             $table->date('paid_date');
             $table->double('amount')->default(0);
+            $table->timestamps();
+
 
 
         });
