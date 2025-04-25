@@ -39,7 +39,8 @@
                                         <td class="fw-semibold">{{ $category->title }}</td>
                                         <td class="text-muted">{{ ($category->description) }}</td>
                                         <td>
-                                            <span class="badge bg-primary-subtle text-primary">{{ $category->category }}</span>
+                                            <span
+                                                class="badge bg-primary-subtle text-primary">{{ $category->category }}</span>
                                         </td>
                                         <td>
                                         </td>

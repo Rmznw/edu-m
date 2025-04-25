@@ -27,7 +27,7 @@
                             </div>
                             <div class="mb-4 form-control">
                                 <label>Courses</label>
-                                <select  name="course_id" id="course_id" class="form_control">
+                                <select name="course_id" id="course_id" class="form_control">
                                     @foreach($courses as $id => $name)
                                         <option value="{{ $id }}">{{ $name }}</option>
                                     @endforeach

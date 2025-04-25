@@ -3,8 +3,8 @@
 <form action="{{route('login')}}" method="POST">
     @csrf
 
-<h2>    Log In to Your Account
-</h2>
+    <h2> Log In to Your Account
+    </h2>
 
     <label for="name">Name:</label>
     <input type="text"
@@ -13,13 +13,11 @@
            value="{{old('name')}}">
 
 
-
     <label for="email">Email:</label>
     <input type="email"
            name="email"
            required
            value="{{old('email')}}">
-
 
 
     <label for="password">Password</label>
@@ -34,7 +32,7 @@
 
 
     <button type="submit" class="btn btn-outline-success">
-Login
+        Login
     </button>
 
 </form>

@@ -11,7 +11,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body class="bg-dark text-light" data-bs-theme="dark">
-<div class="container-xl px-0" >
+<div class="container-xl px-0">
     <nav class="navbar navbar-expand-xl navbar-dark bg-dark py-3 px-4 border-bottom border-dark">
         <div class="container-xl">
             <a class="navbar-brand d-flex align-items-center" href="/">
@@ -65,14 +65,14 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn btn-dark hover-glow mx-1 py-2"href="{{route('payments.index')}}"
+                        <a class="nav-link btn btn-dark hover-glow mx-1 py-2" href="{{route('payments.index')}}"
                            data-aos="fade-up"
                            data-aos-delay="100">
                             <i class="bi bi-credit-card-2-back-fill me-2"></i>Payment
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn btn-dark hover-glow mx-1 py-2"href="{{route('show.register')}}"
+                        <a class="nav-link btn btn-dark hover-glow mx-1 py-2" href="{{route('show.register')}}"
                            data-aos="fade-up"
                            data-aos-delay="100">
                             <i class="bi-person-plus-fill me-2"></i>Register
@@ -80,7 +80,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link btn btn-dark hover-glow mx-1 py-2"href="{{route('show.login')}}"
+                        <a class="nav-link btn btn-dark hover-glow mx-1 py-2" href="{{route('show.login')}}"
                            data-aos="fade-up"
                            data-aos-delay="100">
                             <i class="bi-box-arrow-in-right me-2"></i>Login
@@ -89,7 +89,7 @@
 
 
                     <li class="nav-item">
-                        <a class="nav-link btn btn-dark hover-glow mx-1 py-2"href="{{route('show.register')}}"
+                        <a class="nav-link btn btn-dark hover-glow mx-1 py-2" href="{{route('show.register')}}"
                            data-aos="fade-up"
                            data-aos-delay="100">
                             <i class="bi-box-arrow-in-right me-2"></i>Logout
@@ -102,34 +102,12 @@
     <div class="page-enter-active">
         <div class="container-xl py-4 mt-4">
             @yield('content')
-        </div></div>
+        </div>
+    </div>
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
-
 
 
 </script>
@@ -209,7 +187,7 @@
 
     .card-animate:hover {
         transform: translateY(-5px) scale(1.02);
-        box-shadow: 0 12px 25px -8px rgba(0,0,0,0.3);
+        box-shadow: 0 12px 25px -8px rgba(0, 0, 0, 0.3);
     }
 
     /* Input Field Interactions */
@@ -247,9 +225,15 @@
     }
 
     @keyframes rotate {
-        0% { transform: rotate(0deg) scale(1); }
-        50% { transform: rotate(180deg) scale(1.1); }
-        100% { transform: rotate(360deg) scale(1); }
+        0% {
+            transform: rotate(0deg) scale(1);
+        }
+        50% {
+            transform: rotate(180deg) scale(1.1);
+        }
+        100% {
+            transform: rotate(360deg) scale(1);
+        }
     }
 
     /* Mobile Optimized Animations */

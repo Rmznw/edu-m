@@ -93,57 +93,6 @@
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <style>
     :root {
         --primary-color: #0d6efd;
@@ -210,8 +159,6 @@
         opacity: 1;
     }
 </style>
-
-
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -314,7 +261,7 @@
             const isValid = validatePassword(passwordInput.value);
             passwordInput.classList.toggle('is-invalid', !isValid);
 
-            if(!isValid) {
+            if (!isValid) {
                 document.getElementById('emailFeedback').textContent =
                     'Password must contain (letters) and (numbers)';
             }
@@ -327,7 +274,7 @@
             const isPasswordValid = validatePassword(passwordInput.value);
             const isConfirmValid = validateConfirmation();
 
-            if(!isPasswordValid || !isConfirmValid) {
+            if (!isPasswordValid || !isConfirmValid) {
                 e.preventDefault();
                 submitBtn.innerHTML = `<i class="bi-x-circle me-2"></i>Security breach!`;
                 submitBtn.classList.add('btn-danger');
