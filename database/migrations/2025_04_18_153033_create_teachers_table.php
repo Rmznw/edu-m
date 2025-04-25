@@ -16,7 +16,7 @@ return new class extends Migration {
             $table->string('lastname')->default(0);
             $table->tinyInteger('age')->default(0);
             $table->string('address')->default(0);
-            $table->string('phone_number')->default(0);
+            $table->string('phone_number')->unique()->regex('/^(\+99343\d{6}|843\d{6})$/');
             $table->string('category')->default(0);
             $table->timestamps();
 

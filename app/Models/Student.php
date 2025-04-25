@@ -17,7 +17,8 @@ class Student extends Model
     protected $primaryKey = 'id';
 
 
-    protected $fillable = ['name', 'lastname', 'age', 'address', 'email'];
+    protected $fillable = ['name', 'lastname', 'age', 'address', 'phone_number'];
+
 
 
     public function course(): HasMany
