@@ -10,11 +10,8 @@
                                 @lang('Courses')
                             </h1>
                             <a href="{{ route('categories.index') }}"
-                               class="btn btn-light btn-lg px-4"
-                               data-bs-toggle="tooltip"
-                               title="@lang('Add Course')">
-                                <i class="bi-plus-circle me-2"></i>
-                                @lang('Add')
+
+                               >
                             </a>
                         </div>
                     </div>
